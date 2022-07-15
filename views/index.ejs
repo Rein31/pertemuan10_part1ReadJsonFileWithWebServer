@@ -1,0 +1,19 @@
+<h1>Hello World</h1>
+<p>Welcome to my page <%= nama %></p>
+<br>
+        <p><b>Contact List:</b></p>
+        <ol>
+            <% if (cont.length === 0) { %>
+                <p><i><b>Data is empty</b></i></p>
+            <% }else { %>
+                <% cont.forEach(element=> { %>
+                    <li> Name :
+                        <%= element.name %>
+                        <br>
+                        Email :
+                        <%= element.email %>
+                    </li>
+                    <% }) %>
+            <% } %>
+            
+        </ol>
