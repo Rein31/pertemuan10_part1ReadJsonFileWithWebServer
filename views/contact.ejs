@@ -1,3 +1,19 @@
 
 <h1>Welcome to Contact Page</h1>
 <p>this is contact page</p>
+<p><b>Contact List:</b></p>
+        <ol>
+            <% if (cont.length === 0) { %>
+                <p><i><b>Data is empty</b></i></p>
+            <% }else { %>
+                <% cont.forEach(element=> { %>
+                    <li> Name :
+                        <%= element.name %>
+                        <br>
+                        Email :
+                        <%= element.email %>
+                    </li>
+                    <% }) %>
+            <% } %>
+            
+        </ol>

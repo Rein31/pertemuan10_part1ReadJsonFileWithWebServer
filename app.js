@@ -53,7 +53,6 @@ app.get("/", (req, res) => {
     res.render('index', {
         nama: "Reinaldi",
         title : "WEB server EJS", 
-        cont : contactJson,
     });
 });
 
@@ -67,7 +66,8 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
     // res.send("This is contact about!");
     res.render('contact', {
-        title : "Contact Page"
+        title : "Contact Page",
+        cont : contactJson,
     })
 });
 
